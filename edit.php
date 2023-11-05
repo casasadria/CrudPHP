@@ -1,9 +1,10 @@
 <?php
 include('db.php');
-if (isset($_GET['id'])){
-    $id = $_GET['id'];
+if (isset($_POST['id'])){
+    $id = $_POST['id'];
     $query = "SELECT * FROM task WHERE id = $id";
     $result = mysqli_query($conn, $query);
+
     if(mysqli_num_rows($result)==1){
         $row = mysqli_fetch_array($result);
         $title = $row['title'];
@@ -13,7 +14,7 @@ if (isset($_GET['id'])){
 
 if (isset($_POST['update'])) {
     // Obtener el ID de forma segura (utilizando validación y saneamiento)
-    $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+    $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
 
     // Verificar si el ID es válido
     if ($id === false || $id <= 0) {
@@ -74,7 +75,8 @@ if (isset($_POST['update'])) {
         <div class="row">
             <div class="col-md-4 mx-auto">
                 <div class="card card-body">
-                    <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
+                    <form action="edit.php" method="POST">
+                        <input type="hidden" name="id" value="<?php echo $_POST['id']; ?>">
                         <div class="form-group mb-2">
                             <input type="text" name="title" value="<?php echo $title ?>" class="form-control" placeholder="Update Title">
                         </div>

@@ -45,11 +45,19 @@
                             <td><?php echo $row['title'] ?></td>
                             <td><?php echo $row['description'] ?></td>
                             <td><?php echo $row['created_add'] ?></td>
-                            <td>
-                                <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn btn-secondary">
-                                    <i class="fa-solid fa-pen-to-square"></i></a>
-                                <a href="delete_task.php?id=<?php echo $row['id'] ?>" class="btn btn-danger"><i
-                                            class="far fa-trash-alt"></i></a>
+                            <td style="display: flex;" class="mb-2">
+                                <form action="edit.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+                                    <button type="submit" class="btn btn-secondary">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </form>
+                                <form action="delete_task.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
 

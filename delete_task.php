@@ -1,9 +1,9 @@
 <?php
 include('db.php');
 
-if (isset($_GET['id'])) {
+if (isset($_POST['id'])) {
     // Obtener el ID de forma segura (utilizando validación y saneamiento)
-    $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+    $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
 
     // Verificar si el ID es válido
     if ($id === false || $id <= 0) {
