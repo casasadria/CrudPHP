@@ -1,7 +1,7 @@
 <?php
 include('db.php');
-if (isset($_POST['id'])){
-    $id = $_POST['id'];
+if (isset($_GET['id'])){
+    $id = $_GET['id'];
     $query = "SELECT * FROM task WHERE id = $id";
     $result = mysqli_query($conn, $query);
 
@@ -65,31 +65,29 @@ if (isset($_POST['update'])) {
         header("Location: index.php");
     }
 }
-
-
 ?>
 
 <?php include("includes/header.php") ?>
 
-    <div class="container p-4">
-        <div class="row">
-            <div class="col-md-4 mx-auto">
-                <div class="card card-body">
-                    <form action="edit.php" method="POST">
-                        <input type="hidden" name="id" value="<?php echo $_POST['id']; ?>">
-                        <div class="form-group mb-2">
-                            <input type="text" name="title" value="<?php echo $title ?>" class="form-control" placeholder="Update Title">
-                        </div>
-                        <div class="form-group mb-2">
-                            <textarea name="description" rows="2" class="form-control" placeholder="Update Description"><?php echo $description ?></textarea>
-                        </div>
-                        <button class="btn btn-success w-100" name="update">
-                            Update
-                        </button>
-                    </form>
-                </div>
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body">
+                <form action="edit.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                    <div class="form-group mb-2">
+                        <input type="text" name="title" value="<?php echo $title ?>" class="form-control" placeholder="Update Title">
+                    </div>
+                    <div class="form-group mb-2">
+                        <textarea name="description" rows="2" class="form-control" placeholder="Update Description"><?php echo $description ?></textarea>
+                    </div>
+                    <button class="btn btn-success w-100" name="update">
+                        Update
+                    </button>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
 <?php include("includes/footer.php") ?>
