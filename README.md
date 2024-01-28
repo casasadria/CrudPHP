@@ -22,5 +22,12 @@
 - La seguridad y la validación de datos no se abordan en este proyecto básico y deben implementarse según sea necesario para un entorno de producción.
 
 ¡Disfruta del proyecto!
-https://github.com/casasadria/CrudPHP/assets/105226763/2cb4ace2-f24c-46ce-aae2-ab799aae713b
+## Video de Ejemplo
+
+Puedes ver un ejemplo del funcionamiento de la aplicación en el siguiente video:
+
+[Ver Video de Ejemplo](https://github.com/casasadria/CrudPHP/assets/105226763/2cb4ace2-f24c-46ce-aae2-ab799aae713b)
+
+Para descargar el video, haz clic [aquí](https://github.com/casasadria/CrudPHP/assets/105226763/2cb4ace2-f24c-46ce-aae2-ab799aae713b).
+
 
