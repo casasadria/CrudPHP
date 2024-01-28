@@ -22,3 +22,7 @@
 - La seguridad y la validación de datos no se abordan en este proyecto básico y deben implementarse según sea necesario para un entorno de producción.
 
 ¡Disfruta del proyecto!
+
+
+https://github.com/casasadria/CrudPHP/assets/2.mp4
+
