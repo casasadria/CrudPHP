@@ -1,5 +1,5 @@
 
-- **`assets/`:** Carpeta que contiene la imagen `1.png`.
+- **`assets/`:** Carpeta que contiene el video de ejemplo
 - **`includes/`:** Carpeta que contiene archivos PHP incluidos en otros scripts.
 - **`delete_task.php`:** Script PHP para eliminar una tarea existente de la base de datos.
 - **`db.php`:** Script PHP para manejar la conexión a la base de datos.
@@ -11,7 +11,7 @@
 ## Uso
 
 1. Clona este repositorio en tu servidor web.
-2. Crea la base de datos MySQL y la tabla `tareas` con las columnas necesarias (`id`, `nombre`, `descripcion`, `imagen`, `video`).
+2. Crea la base de datos MySQL y la tabla `tareas` con las columnas necesarias (`id`, `nombre`, `descripcion`, `fecha de creacion`).
 3. Configura la conexión a la base de datos en el archivo `db.php`.
 4. Accede a `index.php` para ver todas las tareas almacenadas.
 5. Utiliza `save_task.php` para agregar nuevas tareas, `edit.php` para editar tareas existentes y `delete_task.php` para eliminar tareas existentes.
