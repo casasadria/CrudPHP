@@ -22,6 +22,5 @@
 - La seguridad y la validación de datos no se abordan en este proyecto básico y deben implementarse según sea necesario para un entorno de producción.
 
 ¡Disfruta del proyecto!
-![1](https://github.com/casasadria/CrudPHP/assets/105226763/315fea45-113e-4b17-9ca2-2de4cc3b11d2)
 https://github.com/casasadria/CrudPHP/assets/105226763/2cb4ace2-f24c-46ce-aae2-ab799aae713b
 
